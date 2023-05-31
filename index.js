@@ -20,7 +20,6 @@ const proxyOptions = {
   changeOrigin: true,
   // 其他可选配置...
 };
-
 const proxyMiddleware = proxy(proxyOptions);
 app.use(proxyMiddleware);
 
