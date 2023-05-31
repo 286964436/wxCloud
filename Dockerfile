@@ -11,13 +11,13 @@ RUN apk add ca-certificates
 RUN apk add --update --no-cache nodejs npm
 
 # # 指定工作目录
-WORKDIR /app
+#WORKDIR /app
 
 # 拷贝包管理文件
-COPY package*.json /app
+#COPY package*.json /app
 
 # npm 源，选用国内镜像源以提高下载速度
-#RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
+RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 #RUN npm config set registry https://registry.npm.taobao.org/
 
 # npm 安装依赖
