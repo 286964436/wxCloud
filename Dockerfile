@@ -8,8 +8,8 @@ FROM alpine:3.13
 RUN apk add ca-certificates
 
 # 安装依赖包，如需其他依赖包，请到alpine依赖包管理(https://pkgs.alpinelinux.org/packages?name=php8*imagick*&branch=v3.13)查找。
-RUN apk add --update --no-cache nodejs
-RUN apk add --update --no-cache npm
+RUN apk add --update --no-cache nodejs npm
+
 # # 指定工作目录
 WORKDIR /app
 
@@ -17,7 +17,7 @@ WORKDIR /app
 COPY package*.json /app
 
 # npm 源，选用国内镜像源以提高下载速度
-RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
+#RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 #RUN npm config set registry https://registry.npm.taobao.org/
 
 # npm 安装依赖
