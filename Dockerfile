@@ -56,7 +56,7 @@ RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 # npm 安装依赖
 RUN npm install react@^17.0.2 react-scripts@4.0.3 --legacy-peer-deps
 
-RUN npm install
+#RUN npm install
 
 # 将当前目录（dockerfile所在目录）下所有文件都拷贝到工作目录下（.gitignore中的文件除外）
 COPY . /app/
