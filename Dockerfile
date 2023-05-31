@@ -31,17 +31,6 @@
 ## 请参考[Docker官方文档之CMD命令](https://docs.docker.com/engine/reference/builder/#cmd)
 #CMD ["npm", "start"]
 
-
-FROM alpine:3.13
-RUN apk add ca-certificates
-RUN apk add --update --no-cache nodejs npm
-
-WORKDIR /app
-COPY package*.json /app/
-RUN npm install
-COPY . /app/
-RUN npm run build
-
 FROM alpine:3.13
 
 RUN apk add ca-certificates
