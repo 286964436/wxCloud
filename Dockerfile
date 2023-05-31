@@ -45,6 +45,7 @@ RUN npm run build
 FROM alpine:3.13
 
 RUN apk add ca-certificates
+
 RUN apk add --update --no-cache nodejs
 WORKDIR /app
 COPY --from=0 /app/dist /app/dist
