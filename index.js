@@ -24,7 +24,7 @@ const proxyOptions = {
 const proxyMiddleware = proxy(proxyOptions);
 app.use(proxyMiddleware);
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 app.listen(port, () => {
   console.log(`服务正直运行 ${port}`);
 });
