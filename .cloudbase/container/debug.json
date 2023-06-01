@@ -1,5 +1,11 @@
 {
-  "containers": [],
+  "containers": [
+    {
+      "name": "wxcloud",
+      "domain": "",
+      "ip": ""
+    }
+  ],
   "config": {
     "wxcloud": {
       "containerPort": 80,

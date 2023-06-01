@@ -53,10 +53,16 @@ COPY package*.json /app/
 RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 # RUN npm config set registry https://registry.npm.taobao.org/
 
-RUN npm install
+RUN npm install koa
+
+RUN npm install koa2-cors
+
+RUN npm install koa-http-proxy
+
+RUN npm install koa-logger
 
 # npm 安装依赖
-RUN npm install react@^17.0.2 react-scripts@4.0.3 --legacy-peer-deps
+#RUN npm install react@^17.0.2 react-scripts@4.0.3 --legacy-peer-deps
 
 
 # 将当前目录（dockerfile所在目录）下所有文件都拷贝到工作目录下（.gitignore中的文件除外）
