@@ -19,6 +19,11 @@ const proxyOptions = {
   target: 'http://cdxsyl.cn/',
   changeOrigin: true,
   // 其他可选配置...
+  // 添加以下配置将转发所有请求头和 cookie
+  rewrite: path => path.replace(/^\/api/, ''),
+  logs: true,
+  suppressRequestHeaders: [],
+  suppressResponseHeaders: []
 };
 
 const proxyMiddleware = proxy(proxyOptions);
